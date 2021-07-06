@@ -1,0 +1,14 @@
+﻿@model List<BigSchool.Models.Course>
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <ul>
+        @foreach(var course in Model)
+            {
+                <li>
+                    @course.DateTime.ToString("dd/MM/yyyy HH:mm") - @course.AspNetUser.Name
+                </li>
+            }
+        </ul>
+</div>
