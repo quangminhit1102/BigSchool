@@ -106,3 +106,9 @@ D:\TH-LTWEB(2021)\Tuan04\BigSchool\obj\Debug\BigSchool.csproj.CopyComplete
 D:\TH-LTWEB(2021)\Tuan04\BigSchool\obj\Debug\BigSchool.dll
 D:\TH-LTWEB(2021)\Tuan04\BigSchool\obj\Debug\BigSchool.pdb
 D:\TH-LTWEB(2021)\Tuan04\BigSchool\obj\Debug\BigSchool.csprojAssemblyReference.cache
+D:\TH-LTWEB(2021)\Tuan04\BigSchool\bin\System.Net.Http.Formatting.dll
+D:\TH-LTWEB(2021)\Tuan04\BigSchool\bin\System.Web.Http.dll
+D:\TH-LTWEB(2021)\Tuan04\BigSchool\bin\System.Web.Http.WebHost.dll
+D:\TH-LTWEB(2021)\Tuan04\BigSchool\bin\System.Net.Http.Formatting.xml
+D:\TH-LTWEB(2021)\Tuan04\BigSchool\bin\System.Web.Http.xml
+D:\TH-LTWEB(2021)\Tuan04\BigSchool\bin\System.Web.Http.WebHost.xml
