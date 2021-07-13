@@ -15,11 +15,11 @@ namespace BigSchool.Controllers
         {
             BigSchoolContext context = new BigSchoolContext();
             List<Course> upcommingCourse = context.Courses.Where(p => p.DateTime > DateTime.Now).OrderBy(p => p.DateTime).ToList();
-            //foreach(Course i in upcommingCourse)
-            //{
-            //    ApplicationUser user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(i.LecturerId);
-            //    i.AspNetUser.Name = user.Name;
-            //}    
+            foreach (Course i in upcommingCourse)
+            {
+                ApplicationUser user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(i.LecturerId);
+                i.Name = user.Name;
+            }
             return View(upcommingCourse);
         }
 
