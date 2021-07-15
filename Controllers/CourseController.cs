@@ -78,10 +78,13 @@ namespace BigSchool.Controllers
             ApplicationUser currentUser = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
             BigSchoolContext db = new BigSchoolContext();
             Course course = db.Courses.Find(id);
-            Attendance attendance = db.Attendances.SingleOrDefault(x => x.CourseId == course.Id && x.Attendee == currentUser.Id);
+            List<Attendance> attendances = db.Attendances.Where(x=>x.CourseId==course.Id).ToList();
             if (course != null)
             {
-                db.Attendances.Remove(attendance);
+                foreach(var item in attendances)
+                {
+                    db.Attendances.Remove(item);
+                }    
                 db.Courses.Remove(course);
                 db.SaveChanges();
                 return RedirectToAction("Index", "Home");
